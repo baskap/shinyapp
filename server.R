@@ -10,7 +10,7 @@ shinyServer(
       plot <- ggplot(data = tmpIrisDs,aes(x = x, y = y, color=Species)) + 
         geom_point() +
         xlab(input$x) +  ylab(input$y) +
-        ggtitle( paste0(input$x," (mean " , round(mean(tmpIrisDs$x),2) ,  ") vs. ", input$x,
+        ggtitle( paste0(input$x," (mean " , round(mean(tmpIrisDs$x),2) ,  ") vs. ", input$y,
                         " (mean ", round(mean(tmpIrisDs$y),2), ")\n"))
       
       if (input$showlm) {  
